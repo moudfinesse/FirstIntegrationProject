@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "FisrtIntegrationProject", "FisrtIntegrationProject.dtproj", "{2C937B37-8563-40BD-BE52-AAE04BA57444}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C937B37-8563-40BD-BE52-AAE04BA57444}.Development|Default.ActiveCfg = Development
+		{2C937B37-8563-40BD-BE52-AAE04BA57444}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94E49606-9DB8-40AE-9807-C9D80F59DF8C}
+	EndGlobalSection
+EndGlobal
