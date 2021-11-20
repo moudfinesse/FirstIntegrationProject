@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Lesson2"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{68A65C75-8817-4A76-862B-B240AD978034}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{4F85B29E-D5CA-4A90-A625-303884CDF73F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -781,7 +781,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="218.4,41.6"
           Id="Package\Foreach File in Folder\Extract Sample Currency Data"
@@ -793,6 +793,13 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           Size="228.8,145.6"
           Id="Package\Foreach File in Folder"
           TopLeft="271.666655871604,204.533334958818" />
+        <AnnotationLayout
+          Text="Annotation x"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="96.8,60"
+          Id="869b9840-49d0-4ae0-9b6d-562ef53ac8ba"
+          TopLeft="205.833325154252,54.6000004339218" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -836,7 +843,9 @@ where [refTable].[FullDateAlternateKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
