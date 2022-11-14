@@ -2,13 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>FisrtIntegrationProject</Name>
-    <LastWriteTime>2022-11-14T13:49:01.6618805Z</LastWriteTime>
+    <LastWriteTime>2022-11-14T15:03:44.7999306Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>TrierTerritories.dtsx</Name>
-      <LastWriteTime>2022-11-14T14:15:30.3258633Z</LastWriteTime>
+      <LastWriteTime>2022-11-14T15:05:13.4813504Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>USCustomers (1).dtsx</Name>
+      <LastWriteTime>2022-11-14T14:30:58.2841506Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

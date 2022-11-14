@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="11/16/2021 3:59:34 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Lesson1"
   DTS:PackageType="5"
-  DTS:VersionBuild="51"
-  DTS:VersionGUID="{BE558607-E881-40AB-B21E-4C65495D458C}">
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{E8265687-337A-40C4-88E9-BF5E07E74AC1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -167,13 +167,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data flow"
+      DTS:refId="Package\Extract Sample Currency Data"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tâche de flux de données"
       DTS:DTSID="{F1AE9CFF-F8CD-4669-A457-526CD8F78C85}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="1033"
-      DTS:ObjectName="Data flow"
+      DTS:ObjectName="Extract Sample Currency Data"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -181,7 +181,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data flow\Destination OLE DB"
+              refId="Package\Extract Sample Currency Data\Destination OLE DB"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
               description="Destination OLE DB"
@@ -238,7 +238,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data flow\Destination OLE DB.Connections[OleDbConnection]"
+                  refId="Package\Extract Sample Currency Data\Destination OLE DB.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.AdventureWorks2012 1]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.AdventureWorks2012 1]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
@@ -246,400 +246,400 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
                   errorOrTruncationOperation="Insérer"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrée de destination OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[CustomerKey]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[CustomerKey]"
                       cachedDataType="i4"
                       cachedName="CustomerKey"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerKey]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CustomerKey]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerKey]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CustomerKey]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[GeographyKey]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[GeographyKey]"
                       cachedDataType="i4"
                       cachedName="GeographyKey"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Extracting Dim Customer.GeographyKey]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[GeographyKey]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Extracting Dim Customer.GeographyKey]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[GeographyKey]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[CustomerAlternateKey]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[CustomerAlternateKey]"
                       cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="CustomerAlternateKey"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerAlternateKey]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CustomerAlternateKey]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerAlternateKey]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CustomerAlternateKey]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Title]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Title]"
                       cachedDataType="wstr"
                       cachedLength="8"
                       cachedName="Title"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Title]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Title]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Title]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Title]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[FirstName]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[FirstName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="FirstName"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FirstName]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FirstName]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FirstName]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FirstName]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[MiddleName]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[MiddleName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="MiddleName"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[MiddleName]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[MiddleName]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[MiddleName]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[MiddleName]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[LastName]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[LastName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="LastName"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[LastName]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[LastName]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[LastName]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[LastName]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[NameStyle]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[NameStyle]"
                       cachedDataType="bool"
                       cachedName="NameStyle"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[NameStyle]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NameStyle]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[NameStyle]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NameStyle]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[BirthDate]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[BirthDate]"
                       cachedDataType="dbDate"
                       cachedName="BirthDate"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[BirthDate]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[BirthDate]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[BirthDate]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[BirthDate]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[MaritalStatus]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[MaritalStatus]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="MaritalStatus"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[MaritalStatus]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[MaritalStatus]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[MaritalStatus]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[MaritalStatus]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Suffix]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Suffix]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="Suffix"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Suffix]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Suffix]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Suffix]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Suffix]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Gender]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Gender]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="Gender"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Gender]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Gender]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Gender]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Gender]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EmailAddress]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EmailAddress]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="EmailAddress"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EmailAddress]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EmailAddress]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EmailAddress]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EmailAddress]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[YearlyIncome]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[YearlyIncome]"
                       cachedDataType="cy"
                       cachedName="YearlyIncome"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[YearlyIncome]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[YearlyIncome]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[YearlyIncome]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[YearlyIncome]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[TotalChildren]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[TotalChildren]"
                       cachedDataType="ui1"
                       cachedName="TotalChildren"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[TotalChildren]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[TotalChildren]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[TotalChildren]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[TotalChildren]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[NumberChildrenAtHome]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[NumberChildrenAtHome]"
                       cachedDataType="ui1"
                       cachedName="NumberChildrenAtHome"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[NumberChildrenAtHome]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NumberChildrenAtHome]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[NumberChildrenAtHome]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NumberChildrenAtHome]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EnglishEducation]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EnglishEducation]"
                       cachedDataType="wstr"
                       cachedLength="40"
                       cachedName="EnglishEducation"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishEducation]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EnglishEducation]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishEducation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EnglishEducation]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[SpanishEducation]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[SpanishEducation]"
                       cachedDataType="wstr"
                       cachedLength="40"
                       cachedName="SpanishEducation"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[SpanishEducation]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[SpanishEducation]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[SpanishEducation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[SpanishEducation]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[FrenchEducation]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[FrenchEducation]"
                       cachedDataType="wstr"
                       cachedLength="40"
                       cachedName="FrenchEducation"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FrenchEducation]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FrenchEducation]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FrenchEducation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FrenchEducation]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EnglishOccupation]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EnglishOccupation]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="EnglishOccupation"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishOccupation]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EnglishOccupation]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishOccupation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EnglishOccupation]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[SpanishOccupation]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[SpanishOccupation]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="SpanishOccupation"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[SpanishOccupation]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[SpanishOccupation]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[SpanishOccupation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[SpanishOccupation]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[FrenchOccupation]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[FrenchOccupation]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="FrenchOccupation"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FrenchOccupation]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FrenchOccupation]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FrenchOccupation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FrenchOccupation]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[HouseOwnerFlag]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[HouseOwnerFlag]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="HouseOwnerFlag"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[HouseOwnerFlag]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[HouseOwnerFlag]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[HouseOwnerFlag]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[HouseOwnerFlag]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[NumberCarsOwned]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[NumberCarsOwned]"
                       cachedDataType="ui1"
                       cachedName="NumberCarsOwned"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[NumberCarsOwned]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NumberCarsOwned]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[NumberCarsOwned]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NumberCarsOwned]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[AddressLine1]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[AddressLine1]"
                       cachedDataType="wstr"
                       cachedLength="120"
                       cachedName="AddressLine1"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[AddressLine1]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[AddressLine1]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[AddressLine1]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[AddressLine1]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[AddressLine2]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[AddressLine2]"
                       cachedDataType="wstr"
                       cachedLength="120"
                       cachedName="AddressLine2"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[AddressLine2]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[AddressLine2]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[AddressLine2]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[AddressLine2]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Phone]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Phone]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="Phone"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Phone]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Phone]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Phone]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Phone]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[DateFirstPurchase]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[DateFirstPurchase]"
                       cachedDataType="dbDate"
                       cachedName="DateFirstPurchase"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DateFirstPurchase]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[DateFirstPurchase]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DateFirstPurchase]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[DateFirstPurchase]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[CommuteDistance]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[CommuteDistance]"
                       cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="CommuteDistance"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CommuteDistance]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CommuteDistance]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CommuteDistance]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CommuteDistance]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[GeographyKey1]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[GeographyKey1]"
                       cachedDataType="i4"
                       cachedName="GeographyKey"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Search US customer's.GeographyKey]"
-                      lineageId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[GeographyKey]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Search US customer's.GeographyKey]"
+                      lineageId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[GeographyKey]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[City]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[City]"
                       cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="City"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[City]"
-                      lineageId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[City]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[City]"
+                      lineageId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[City]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[StateProvinceCode]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[StateProvinceCode]"
                       cachedDataType="wstr"
                       cachedLength="3"
                       cachedName="StateProvinceCode"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[StateProvinceCode]"
-                      lineageId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[StateProvinceCode]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[StateProvinceCode]"
+                      lineageId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[StateProvinceCode]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EnglishCountryRegionName]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EnglishCountryRegionName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="EnglishCountryRegionName"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishCountryRegionName]"
-                      lineageId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[EnglishCountryRegionName]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishCountryRegionName]"
+                      lineageId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[EnglishCountryRegionName]" />
                     <inputColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[PostalCode]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[PostalCode]"
                       cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="PostalCode"
-                      externalMetadataColumnId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[PostalCode]"
-                      lineageId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[PostalCode]" />
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[PostalCode]"
+                      lineageId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[PostalCode]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerKey]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerKey]"
                       dataType="i4"
                       name="CustomerKey" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Extracting Dim Customer.GeographyKey]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Extracting Dim Customer.GeographyKey]"
                       dataType="i4"
                       name="Extracting Dim Customer.GeographyKey" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerAlternateKey]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerAlternateKey]"
                       dataType="wstr"
                       length="15"
                       name="CustomerAlternateKey" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Title]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Title]"
                       dataType="wstr"
                       length="8"
                       name="Title" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FirstName]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FirstName]"
                       dataType="wstr"
                       length="50"
                       name="FirstName" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[MiddleName]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[MiddleName]"
                       dataType="wstr"
                       length="50"
                       name="MiddleName" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[LastName]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[LastName]"
                       dataType="wstr"
                       length="50"
                       name="LastName" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[NameStyle]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[NameStyle]"
                       dataType="bool"
                       name="NameStyle" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[BirthDate]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[BirthDate]"
                       dataType="dbDate"
                       name="BirthDate" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[MaritalStatus]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[MaritalStatus]"
                       dataType="wstr"
                       length="1"
                       name="MaritalStatus" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Suffix]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Suffix]"
                       dataType="wstr"
                       length="10"
                       name="Suffix" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Gender]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Gender]"
                       dataType="wstr"
                       length="1"
                       name="Gender" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EmailAddress]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EmailAddress]"
                       dataType="wstr"
                       length="50"
                       name="EmailAddress" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[YearlyIncome]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[YearlyIncome]"
                       dataType="cy"
                       name="YearlyIncome" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[TotalChildren]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[TotalChildren]"
                       dataType="ui1"
                       name="TotalChildren" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[NumberChildrenAtHome]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[NumberChildrenAtHome]"
                       dataType="ui1"
                       name="NumberChildrenAtHome" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishEducation]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishEducation]"
                       dataType="wstr"
                       length="40"
                       name="EnglishEducation" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[SpanishEducation]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[SpanishEducation]"
                       dataType="wstr"
                       length="40"
                       name="SpanishEducation" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FrenchEducation]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FrenchEducation]"
                       dataType="wstr"
                       length="40"
                       name="FrenchEducation" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishOccupation]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishOccupation]"
                       dataType="wstr"
                       length="100"
                       name="EnglishOccupation" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[SpanishOccupation]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[SpanishOccupation]"
                       dataType="wstr"
                       length="100"
                       name="SpanishOccupation" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FrenchOccupation]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FrenchOccupation]"
                       dataType="wstr"
                       length="100"
                       name="FrenchOccupation" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[HouseOwnerFlag]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[HouseOwnerFlag]"
                       dataType="wstr"
                       length="1"
                       name="HouseOwnerFlag" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[NumberCarsOwned]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[NumberCarsOwned]"
                       dataType="ui1"
                       name="NumberCarsOwned" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[AddressLine1]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[AddressLine1]"
                       dataType="wstr"
                       length="120"
                       name="AddressLine1" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[AddressLine2]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[AddressLine2]"
                       dataType="wstr"
                       length="120"
                       name="AddressLine2" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Phone]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Phone]"
                       dataType="wstr"
                       length="20"
                       name="Phone" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DateFirstPurchase]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DateFirstPurchase]"
                       dataType="dbDate"
                       name="DateFirstPurchase" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CommuteDistance]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CommuteDistance]"
                       dataType="wstr"
                       length="15"
                       name="CommuteDistance" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Search US customer's.GeographyKey]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Search US customer's.GeographyKey]"
                       dataType="i4"
                       name="Search US customer's.GeographyKey" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[City]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[City]"
                       dataType="wstr"
                       length="30"
                       name="City" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[StateProvinceCode]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[StateProvinceCode]"
                       dataType="wstr"
                       length="3"
                       name="StateProvinceCode" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishCountryRegionName]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishCountryRegionName]"
                       dataType="wstr"
                       length="50"
                       name="EnglishCountryRegionName" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[PostalCode]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[PostalCode]"
                       dataType="wstr"
                       length="15"
                       name="PostalCode" />
@@ -648,22 +648,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data flow\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  refId="Package\Extract Sample Currency Data\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de destination OLE DB"
-                  synchronousInputId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                  synchronousInputId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data flow\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data flow\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Extract Sample Currency Data\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data flow\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Extract Sample Currency Data\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data flow\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Extract Sample Currency Data\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -672,7 +672,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data flow\Extracting Dim Customer"
+              refId="Package\Extract Sample Currency Data\Extracting Dim Customer"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
               description="Source OLE DB"
@@ -721,7 +721,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data flow\Extracting Dim Customer.Connections[OleDbConnection]"
+                  refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Connections[OleDbConnection]"
                   connectionManagerID="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:external"
                   connectionManagerRefId="Project.ConnectionManagers[LAPTOP-MDQ47B21_SQLEXPRESS.AdventureWorksDW2012]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
@@ -729,611 +729,611 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB]"
+                  refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB]"
                   name="Sortie de source OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CustomerKey]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CustomerKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerKey]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CustomerKey]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerKey]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CustomerKey]"
                       name="CustomerKey"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[GeographyKey]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[GeographyKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[GeographyKey]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[GeographyKey]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[GeographyKey]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[GeographyKey]"
                       name="GeographyKey"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CustomerAlternateKey]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CustomerAlternateKey]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerAlternateKey]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerAlternateKey]"
                       length="15"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CustomerAlternateKey]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CustomerAlternateKey]"
                       name="CustomerAlternateKey"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Title]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Title]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Title]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Title]"
                       length="8"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Title]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Title]"
                       name="Title"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FirstName]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FirstName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[FirstName]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[FirstName]"
                       length="50"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FirstName]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FirstName]"
                       name="FirstName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[MiddleName]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[MiddleName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[MiddleName]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[MiddleName]"
                       length="50"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[MiddleName]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[MiddleName]"
                       name="MiddleName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[LastName]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[LastName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[LastName]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[LastName]"
                       length="50"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[LastName]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[LastName]"
                       name="LastName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NameStyle]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NameStyle]"
                       dataType="bool"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[NameStyle]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NameStyle]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[NameStyle]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NameStyle]"
                       name="NameStyle"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[BirthDate]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[BirthDate]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[BirthDate]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[BirthDate]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[BirthDate]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[BirthDate]"
                       name="BirthDate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[MaritalStatus]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[MaritalStatus]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[MaritalStatus]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[MaritalStatus]"
                       length="1"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[MaritalStatus]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[MaritalStatus]"
                       name="MaritalStatus"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Suffix]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Suffix]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Suffix]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Suffix]"
                       length="10"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Suffix]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Suffix]"
                       name="Suffix"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Gender]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Gender]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Gender]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Gender]"
                       length="1"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Gender]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Gender]"
                       name="Gender"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EmailAddress]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EmailAddress]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[EmailAddress]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[EmailAddress]"
                       length="50"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EmailAddress]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EmailAddress]"
                       name="EmailAddress"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[YearlyIncome]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[YearlyIncome]"
                       dataType="cy"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[YearlyIncome]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[YearlyIncome]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[YearlyIncome]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[YearlyIncome]"
                       name="YearlyIncome"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[TotalChildren]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[TotalChildren]"
                       dataType="ui1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[TotalChildren]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[TotalChildren]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[TotalChildren]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[TotalChildren]"
                       name="TotalChildren"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NumberChildrenAtHome]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NumberChildrenAtHome]"
                       dataType="ui1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[NumberChildrenAtHome]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NumberChildrenAtHome]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[NumberChildrenAtHome]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NumberChildrenAtHome]"
                       name="NumberChildrenAtHome"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EnglishEducation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EnglishEducation]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishEducation]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishEducation]"
                       length="40"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EnglishEducation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EnglishEducation]"
                       name="EnglishEducation"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[SpanishEducation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[SpanishEducation]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[SpanishEducation]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[SpanishEducation]"
                       length="40"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[SpanishEducation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[SpanishEducation]"
                       name="SpanishEducation"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FrenchEducation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FrenchEducation]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchEducation]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchEducation]"
                       length="40"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FrenchEducation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FrenchEducation]"
                       name="FrenchEducation"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EnglishOccupation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EnglishOccupation]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishOccupation]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishOccupation]"
                       length="100"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EnglishOccupation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[EnglishOccupation]"
                       name="EnglishOccupation"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[SpanishOccupation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[SpanishOccupation]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[SpanishOccupation]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[SpanishOccupation]"
                       length="100"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[SpanishOccupation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[SpanishOccupation]"
                       name="SpanishOccupation"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FrenchOccupation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FrenchOccupation]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchOccupation]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchOccupation]"
                       length="100"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FrenchOccupation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[FrenchOccupation]"
                       name="FrenchOccupation"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[HouseOwnerFlag]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[HouseOwnerFlag]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[HouseOwnerFlag]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[HouseOwnerFlag]"
                       length="1"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[HouseOwnerFlag]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[HouseOwnerFlag]"
                       name="HouseOwnerFlag"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NumberCarsOwned]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NumberCarsOwned]"
                       dataType="ui1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[NumberCarsOwned]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NumberCarsOwned]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[NumberCarsOwned]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[NumberCarsOwned]"
                       name="NumberCarsOwned"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[AddressLine1]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[AddressLine1]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[AddressLine1]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[AddressLine1]"
                       length="120"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[AddressLine1]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[AddressLine1]"
                       name="AddressLine1"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[AddressLine2]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[AddressLine2]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[AddressLine2]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[AddressLine2]"
                       length="120"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[AddressLine2]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[AddressLine2]"
                       name="AddressLine2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Phone]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Phone]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Phone]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Phone]"
                       length="20"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Phone]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[Phone]"
                       name="Phone"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[DateFirstPurchase]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[DateFirstPurchase]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[DateFirstPurchase]"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[DateFirstPurchase]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[DateFirstPurchase]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[DateFirstPurchase]"
                       name="DateFirstPurchase"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CommuteDistance]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CommuteDistance]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[CommuteDistance]"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[CommuteDistance]"
                       length="15"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CommuteDistance]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[CommuteDistance]"
                       name="CommuteDistance"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerKey]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerKey]"
                       dataType="i4"
                       name="CustomerKey" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[GeographyKey]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[GeographyKey]"
                       dataType="i4"
                       name="GeographyKey" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerAlternateKey]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerAlternateKey]"
                       dataType="wstr"
                       length="15"
                       name="CustomerAlternateKey" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Title]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Title]"
                       dataType="wstr"
                       length="8"
                       name="Title" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[FirstName]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[FirstName]"
                       dataType="wstr"
                       length="50"
                       name="FirstName" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[MiddleName]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[MiddleName]"
                       dataType="wstr"
                       length="50"
                       name="MiddleName" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[LastName]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[LastName]"
                       dataType="wstr"
                       length="50"
                       name="LastName" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[NameStyle]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[NameStyle]"
                       dataType="bool"
                       name="NameStyle" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[BirthDate]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[BirthDate]"
                       dataType="dbDate"
                       name="BirthDate" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[MaritalStatus]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[MaritalStatus]"
                       dataType="wstr"
                       length="1"
                       name="MaritalStatus" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Suffix]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Suffix]"
                       dataType="wstr"
                       length="10"
                       name="Suffix" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Gender]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Gender]"
                       dataType="wstr"
                       length="1"
                       name="Gender" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[EmailAddress]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[EmailAddress]"
                       dataType="wstr"
                       length="50"
                       name="EmailAddress" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[YearlyIncome]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[YearlyIncome]"
                       dataType="cy"
                       name="YearlyIncome" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[TotalChildren]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[TotalChildren]"
                       dataType="ui1"
                       name="TotalChildren" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[NumberChildrenAtHome]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[NumberChildrenAtHome]"
                       dataType="ui1"
                       name="NumberChildrenAtHome" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishEducation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishEducation]"
                       dataType="wstr"
                       length="40"
                       name="EnglishEducation" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[SpanishEducation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[SpanishEducation]"
                       dataType="wstr"
                       length="40"
                       name="SpanishEducation" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchEducation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchEducation]"
                       dataType="wstr"
                       length="40"
                       name="FrenchEducation" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishOccupation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishOccupation]"
                       dataType="wstr"
                       length="100"
                       name="EnglishOccupation" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[SpanishOccupation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[SpanishOccupation]"
                       dataType="wstr"
                       length="100"
                       name="SpanishOccupation" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchOccupation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[FrenchOccupation]"
                       dataType="wstr"
                       length="100"
                       name="FrenchOccupation" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[HouseOwnerFlag]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[HouseOwnerFlag]"
                       dataType="wstr"
                       length="1"
                       name="HouseOwnerFlag" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[NumberCarsOwned]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[NumberCarsOwned]"
                       dataType="ui1"
                       name="NumberCarsOwned" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[AddressLine1]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[AddressLine1]"
                       dataType="wstr"
                       length="120"
                       name="AddressLine1" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[AddressLine2]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[AddressLine2]"
                       dataType="wstr"
                       length="120"
                       name="AddressLine2" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Phone]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[Phone]"
                       dataType="wstr"
                       length="20"
                       name="Phone" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[DateFirstPurchase]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[DateFirstPurchase]"
                       dataType="dbDate"
                       name="DateFirstPurchase" />
                     <externalMetadataColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[CommuteDistance]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].ExternalColumns[CommuteDistance]"
                       dataType="wstr"
                       length="15"
                       name="CommuteDistance" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB]"
+                  refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB]"
                   isErrorOut="true"
                   name="Sortie d'erreur de source OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[CustomerKey]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[CustomerKey]"
                       dataType="i4"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[CustomerKey]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[CustomerKey]"
                       name="CustomerKey" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[GeographyKey]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[GeographyKey]"
                       dataType="i4"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[GeographyKey]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[GeographyKey]"
                       name="GeographyKey" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[CustomerAlternateKey]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[CustomerAlternateKey]"
                       dataType="wstr"
                       length="15"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[CustomerAlternateKey]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[CustomerAlternateKey]"
                       name="CustomerAlternateKey" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Title]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Title]"
                       dataType="wstr"
                       length="8"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Title]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Title]"
                       name="Title" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[FirstName]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[FirstName]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[FirstName]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[FirstName]"
                       name="FirstName" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[MiddleName]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[MiddleName]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[MiddleName]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[MiddleName]"
                       name="MiddleName" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[LastName]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[LastName]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[LastName]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[LastName]"
                       name="LastName" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[NameStyle]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[NameStyle]"
                       dataType="bool"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[NameStyle]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[NameStyle]"
                       name="NameStyle" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[BirthDate]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[BirthDate]"
                       dataType="dbDate"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[BirthDate]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[BirthDate]"
                       name="BirthDate" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[MaritalStatus]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[MaritalStatus]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[MaritalStatus]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[MaritalStatus]"
                       name="MaritalStatus" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Suffix]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Suffix]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Suffix]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Suffix]"
                       name="Suffix" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Gender]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Gender]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Gender]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Gender]"
                       name="Gender" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[EmailAddress]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[EmailAddress]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[EmailAddress]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[EmailAddress]"
                       name="EmailAddress" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[YearlyIncome]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[YearlyIncome]"
                       dataType="cy"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[YearlyIncome]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[YearlyIncome]"
                       name="YearlyIncome" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[TotalChildren]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[TotalChildren]"
                       dataType="ui1"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[TotalChildren]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[TotalChildren]"
                       name="TotalChildren" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[NumberChildrenAtHome]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[NumberChildrenAtHome]"
                       dataType="ui1"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[NumberChildrenAtHome]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[NumberChildrenAtHome]"
                       name="NumberChildrenAtHome" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishEducation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishEducation]"
                       dataType="wstr"
                       length="40"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishEducation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishEducation]"
                       name="EnglishEducation" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[SpanishEducation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[SpanishEducation]"
                       dataType="wstr"
                       length="40"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[SpanishEducation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[SpanishEducation]"
                       name="SpanishEducation" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchEducation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchEducation]"
                       dataType="wstr"
                       length="40"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchEducation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchEducation]"
                       name="FrenchEducation" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishOccupation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishOccupation]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishOccupation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishOccupation]"
                       name="EnglishOccupation" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[SpanishOccupation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[SpanishOccupation]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[SpanishOccupation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[SpanishOccupation]"
                       name="SpanishOccupation" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchOccupation]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchOccupation]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchOccupation]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[FrenchOccupation]"
                       name="FrenchOccupation" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[HouseOwnerFlag]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[HouseOwnerFlag]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[HouseOwnerFlag]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[HouseOwnerFlag]"
                       name="HouseOwnerFlag" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[NumberCarsOwned]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[NumberCarsOwned]"
                       dataType="ui1"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[NumberCarsOwned]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[NumberCarsOwned]"
                       name="NumberCarsOwned" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[AddressLine1]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[AddressLine1]"
                       dataType="wstr"
                       length="120"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[AddressLine1]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[AddressLine1]"
                       name="AddressLine1" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[AddressLine2]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[AddressLine2]"
                       dataType="wstr"
                       length="120"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[AddressLine2]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[AddressLine2]"
                       name="AddressLine2" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Phone]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Phone]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Phone]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[Phone]"
                       name="Phone" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[DateFirstPurchase]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[DateFirstPurchase]"
                       dataType="dbDate"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[DateFirstPurchase]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[DateFirstPurchase]"
                       name="DateFirstPurchase" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[CommuteDistance]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[CommuteDistance]"
                       dataType="wstr"
                       length="15"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[CommuteDistance]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[CommuteDistance]"
                       name="CommuteDistance" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1342,7 +1342,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data flow\Search US customer's"
+              refId="Package\Extract Sample Currency Data\Search US customer's"
               componentClassID="Microsoft.Lookup"
               contactInfo="Recherche;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;6"
               description="Joint des colonnes supplémentaires au flux de données en recherchant des valeurs dans une table. Par exemple, joignez la colonne 'id employé' à la table des employés afin d'obtenir la 'date d'embauche' et le 'nom de l'employé'. Nous recommandons cette transformation lorsque la table de recherche peut être stockée en mémoire."
@@ -1402,7 +1402,7 @@ where [refTable].[GeographyKey] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[GeographyKey]};</property>
+                  name="ParameterMap">#{Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[GeographyKey]};</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -1414,7 +1414,7 @@ where [refTable].[GeographyKey] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data flow\Search US customer's.Connections[OleDbConnection]"
+                  refId="Package\Extract Sample Currency Data\Search US customer's.Connections[OleDbConnection]"
                   connectionManagerID="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:external"
                   connectionManagerRefId="Project.ConnectionManagers[LAPTOP-MDQ47B21_SQLEXPRESS.AdventureWorksDW2012]"
                   description="Gestionnaire de connexions utilisé pour accéder aux données de correspondance."
@@ -1422,14 +1422,14 @@ where [refTable].[GeographyKey] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data flow\Search US customer's.Inputs[Entrée de recherche]"
+                  refId="Package\Extract Sample Currency Data\Search US customer's.Inputs[Entrée de recherche]"
                   name="Entrée de recherche">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data flow\Search US customer's.Inputs[Entrée de recherche].Columns[GeographyKey]"
+                      refId="Package\Extract Sample Currency Data\Search US customer's.Inputs[Entrée de recherche].Columns[GeographyKey]"
                       cachedDataType="i4"
                       cachedName="GeographyKey"
-                      lineageId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[GeographyKey]">
+                      lineageId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB].Columns[GeographyKey]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1447,17 +1447,17 @@ where [refTable].[GeographyKey] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance]"
+                  refId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance]"
                   errorOrTruncationOperation="Recherche"
                   exclusionGroup="1"
                   name="Sortie de recherche avec correspondance"
-                  synchronousInputId="Package\Data flow\Search US customer's.Inputs[Entrée de recherche]">
+                  synchronousInputId="Package\Extract Sample Currency Data\Search US customer's.Inputs[Entrée de recherche]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[GeographyKey]"
+                      refId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[GeographyKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Copie de colonnes"
-                      lineageId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[GeographyKey]"
+                      lineageId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[GeographyKey]"
                       name="GeographyKey"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1468,11 +1468,11 @@ where [refTable].[GeographyKey] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[City]"
+                      refId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[City]"
                       dataType="wstr"
                       errorOrTruncationOperation="Copie de colonnes"
                       length="30"
-                      lineageId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[City]"
+                      lineageId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[City]"
                       name="City"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1483,11 +1483,11 @@ where [refTable].[GeographyKey] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[StateProvinceCode]"
+                      refId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[StateProvinceCode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Copie de colonnes"
                       length="3"
-                      lineageId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[StateProvinceCode]"
+                      lineageId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[StateProvinceCode]"
                       name="StateProvinceCode"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1498,11 +1498,11 @@ where [refTable].[GeographyKey] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[EnglishCountryRegionName]"
+                      refId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[EnglishCountryRegionName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Copie de colonnes"
                       length="50"
-                      lineageId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[EnglishCountryRegionName]"
+                      lineageId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[EnglishCountryRegionName]"
                       name="EnglishCountryRegionName"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1513,11 +1513,11 @@ where [refTable].[GeographyKey] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[PostalCode]"
+                      refId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[PostalCode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Copie de colonnes"
                       length="15"
-                      lineageId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[PostalCode]"
+                      lineageId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance].Columns[PostalCode]"
                       name="PostalCode"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1531,30 +1531,30 @@ where [refTable].[GeographyKey] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche sans correspondance]"
+                  refId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche sans correspondance]"
                   description="Sortie de recherche gérant les lignes sans entrées correspondantes dans le dataset de référence. Utilisez cette sortie lorsque la propriété NoMatchBehavior a la valeur « Envoyez les lignes sans entrées correspondantes dans la sortie sans correspondance »."
                   exclusionGroup="1"
                   name="Sortie de recherche sans correspondance"
-                  synchronousInputId="Package\Data flow\Search US customer's.Inputs[Entrée de recherche]">
+                  synchronousInputId="Package\Extract Sample Currency Data\Search US customer's.Inputs[Entrée de recherche]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data flow\Search US customer's.Outputs[Sortie d'erreur de recherche]"
+                  refId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie d'erreur de recherche]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de recherche"
-                  synchronousInputId="Package\Data flow\Search US customer's.Inputs[Entrée de recherche]">
+                  synchronousInputId="Package\Extract Sample Currency Data\Search US customer's.Inputs[Entrée de recherche]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data flow\Search US customer's.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      refId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data flow\Search US customer's.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      lineageId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data flow\Search US customer's.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      refId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data flow\Search US customer's.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      lineageId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1565,15 +1565,15 @@ where [refTable].[GeographyKey] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Data flow.Paths[Sortie de recherche avec correspondance]"
-              endId="Package\Data flow\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+              refId="Package\Extract Sample Currency Data.Paths[Sortie de recherche avec correspondance]"
+              endId="Package\Extract Sample Currency Data\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
               name="Sortie de recherche avec correspondance"
-              startId="Package\Data flow\Search US customer's.Outputs[Sortie de recherche avec correspondance]" />
+              startId="Package\Extract Sample Currency Data\Search US customer's.Outputs[Sortie de recherche avec correspondance]" />
             <path
-              refId="Package\Data flow.Paths[Sortie de source OLE DB]"
-              endId="Package\Data flow\Search US customer's.Inputs[Entrée de recherche]"
+              refId="Package\Extract Sample Currency Data.Paths[Sortie de source OLE DB]"
+              endId="Package\Extract Sample Currency Data\Search US customer's.Inputs[Entrée de recherche]"
               name="Sortie de source OLE DB"
-              startId="Package\Data flow\Extracting Dim Customer.Outputs[Sortie de source OLE DB]" />
+              startId="Package\Extract Sample Currency Data\Extracting Dim Customer.Outputs[Sortie de source OLE DB]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2290,7 +2290,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{04168C59-2378-458B-A4A1-DBF2DEB526CA}"
-      DTS:From="Package\Data flow"
+      DTS:From="Package\Extract Sample Currency Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Tâche de script" />
@@ -2301,7 +2301,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
       DTS:From="Package\Tâche d'exécution de requêtes SQL"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Data flow" />
+      DTS:To="Package\Extract Sample Currency Data" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2316,43 +2316,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="123.2,41.6"
-          Id="Package\Data flow"
-          TopLeft="274.52380161572,100.83921647373" />
+          Size="218.4,41.6"
+          Id="Package\Extract Sample Currency Data"
+          TopLeft="221.666657858425,103.133334152963" />
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Tâche de script"
           TopLeft="251.428575710375,203.411767558656" />
-        <NodeLayout
-          Size="244.8,41.6"
-          Id="Package\Tâche d'exécution de requêtes SQL"
-          TopLeft="201.42857485888,8.41176482385416" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="336.12380161572,142.43921647373">
+          TopLeft="328.7476167844,144.733334152963">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-9.4952259053448,60.972551084926"
+              EndConnector="0,58.6784334056927"
               Start="0,0"
-              End="-9.4952259053448,53.472551084926">
+              End="0,51.1784334056927">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.486275542463" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.486275542463"
-                    Point2="0,30.486275542463"
-                    Point3="-4,30.486275542463" />
-                  <mssgle:LineSegment
-                    End="-5.4952259053448,30.486275542463" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5.4952259053448,30.486275542463"
-                    Point2="-9.4952259053448,30.486275542463"
-                    Point3="-9.4952259053448,34.486275542463" />
-                  <mssgle:LineSegment
-                    End="-9.4952259053448,53.472551084926" />
+                    End="0,51.1784334056927" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2361,32 +2345,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="244.8,41.6"
+          Id="Package\Tâche d'exécution de requêtes SQL"
+          TopLeft="201.42857485888,8.41176482385416" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="323.82857485888,50.0117648238542">
+          TopLeft="327.347616358652,50.0117648238542">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12.2952267568398,50.8274516498759"
+              EndConnector="0,53.1215693291088"
               Start="0,0"
-              End="12.2952267568398,43.3274516498759">
+              End="0,45.6215693291088">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.4137258249379" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.4137258249379"
-                    Point2="0,25.4137258249379"
-                    Point3="4,25.4137258249379" />
-                  <mssgle:LineSegment
-                    End="8.29522675683978,25.4137258249379" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.29522675683978,25.4137258249379"
-                    Point2="12.2952267568398,25.4137258249379"
-                    Point3="12.2952267568398,29.4137258249379" />
-                  <mssgle:LineSegment
-                    End="12.2952267568398,43.3274516498759" />
+                    End="0,45.6215693291088" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2399,24 +2375,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data flow">
+    design-time-name="Package\Extract Sample Currency Data">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="196,41.6"
-          Id="Package\Data flow\Extracting Dim Customer"
-          TopLeft="362.142863310113,44.3529417985038" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Data flow\Destination OLE DB"
-          TopLeft="371.428577753962,299.000004193362" />
-        <NodeLayout
           Size="180,41.6"
-          Id="Package\Data flow\Search US customer's"
+          Id="Package\Extract Sample Currency Data\Search US customer's"
           TopLeft="365.000006215914,188.88235559018" />
+        <NodeLayout
+          Size="196,41.6"
+          Id="Package\Extract Sample Currency Data\Extracting Dim Customer"
+          TopLeft="362.142863310113,44.3529417985038" />
         <EdgeLayout
-          Id="Package\Data flow.Paths[Sortie de source OLE DB]"
+          Id="Package\Extract Sample Currency Data.Paths[Sortie de source OLE DB]"
           TopLeft="457.571434763013,85.9529417985038">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2437,8 +2409,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text="Two jobs  on this dataFlow"
+          ParentId="Package\Extract Sample Currency Data"
+          FontInfo="{assembly:Null}"
+          Size="168.8,60"
+          Id="a9acff1f-00f5-4681-808b-2ea1d80073cc"
+          TopLeft="596.428581585689,55.058824301591" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Extract Sample Currency Data\Destination OLE DB"
+          TopLeft="371.428577753962,299.000004193362" />
         <EdgeLayout
-          Id="Package\Data flow.Paths[Sortie de recherche avec correspondance]"
+          Id="Package\Extract Sample Currency Data.Paths[Sortie de recherche avec correspondance]"
           TopLeft="455.814291984938,230.48235559018">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2461,44 +2444,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="Two jobs  on this dataFlow"
-          ParentId="Package\Data flow"
-          FontInfo="{assembly:Null}"
-          Size="168.8,40"
-          Id="a9acff1f-00f5-4681-808b-2ea1d80073cc"
-          TopLeft="596.428581585689,55.058824301591" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data flow\Extracting Dim Customer">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data flow\Destination OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data flow\Search US customer's">
+    design-time-name="Package\Extract Sample Currency Data\Search US customer's">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -2517,6 +2467,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Sample Currency Data\Extracting Dim Customer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Sample Currency Data\Destination OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
