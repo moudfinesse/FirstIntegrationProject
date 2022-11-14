@@ -1,61 +1,61 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="11/16/2021 3:59:34 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-MDQ47B21"
   DTS:CreatorName="LAPTOP-MDQ47B21\33635"
-  DTS:DTSID="{073B27C1-A5C0-4C6D-A29B-233C238C75D6}"
+  DTS:DTSID="{AD26E4FD-3F68-4B49-932A-0E4062554F51}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.948.0"
   DTS:LocaleID="1036"
   DTS:ObjectName="Lesson1"
   DTS:PackageType="5"
   DTS:VersionBuild="50"
-  DTS:VersionGUID="{C821466D-C8D2-4FF8-AF2A-EB053DDB4F4B}">
+  DTS:VersionGUID="{E8265687-337A-40C4-88E9-BF5E07E74AC1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[localhost.AdventureWorks2012]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{8A35D6CA-2173-4490-AA4D-24F654DD85D1}"
+      DTS:DTSID="{72EFA2B2-0C16-4F52-8749-414995629F4F}"
       DTS:ObjectName="localhost.AdventureWorks2012">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AdventureWorks2012;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Lesson1-{8A35D6CA-2173-4490-AA4D-24F654DD85D1}localhost.AdventureWorks2012;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AdventureWorks2012;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Lesson1-{72EFA2B2-0C16-4F52-8749-414995629F4F}localhost.AdventureWorks2012;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[localhost.AdventureWorks2012 1]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{856797B9-D820-4781-9466-B14A7D4802BE}"
+      DTS:DTSID="{F17DD1D6-B543-479B-A8D2-36930D388AF2}"
       DTS:ObjectName="localhost.AdventureWorks2012 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AdventureWorks2012;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Lesson1-{856797B9-D820-4781-9466-B14A7D4802BE}localhost.AdventureWorks2012 1;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AdventureWorks2012;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Lesson1-{F17DD1D6-B543-479B-A8D2-36930D388AF2}localhost.AdventureWorks2012 1;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[localhost.AdventureWorks2012 2]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{2AF148D4-38AE-4E2B-9B05-1E6E1E0C9FE3}"
+      DTS:DTSID="{DC8D655D-E205-4E44-96FF-70E7CD089F7F}"
       DTS:ObjectName="localhost.AdventureWorks2012 2">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AdventureWorks2012;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Lesson1-{2AF148D4-38AE-4E2B-9B05-1E6E1E0C9FE3}localhost.AdventureWorks2012 2;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AdventureWorks2012;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Lesson1-{DC8D655D-E205-4E44-96FF-70E7CD089F7F}localhost.AdventureWorks2012 2;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[SortieReel]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{C2E7BB2B-6930-4F78-B009-B208C2C28B33}"
+      DTS:DTSID="{39C3645A-9DAD-4A84-9B1B-C744CC6623AC}"
       DTS:ObjectName="SortieReel">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -73,7 +73,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="TerritoryID"
-              DTS:DTSID="{111657B1-7A89-4C11-AD07-880FC113947B}"
+              DTS:DTSID="{C93C7B88-EE66-4F9A-8488-A2D07B2E89D1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -82,7 +82,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Name"
-              DTS:DTSID="{8E9E03F6-07D4-4D07-BB5E-0FB287111F3E}"
+              DTS:DTSID="{50E9316F-E7B8-4CAF-ACFB-F9F99D08D6B4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -91,7 +91,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CountryRegionCode"
-              DTS:DTSID="{54C4CF1E-BA84-4F86-8FA7-D79D1DF6FB72}"
+              DTS:DTSID="{2AC30783-7C0E-4A75-A077-8F64B43D230B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -100,7 +100,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Group"
-              DTS:DTSID="{F75CA2B3-AEAE-495F-BECD-7C079A601D01}"
+              DTS:DTSID="{318ADAF8-D7F6-4EA7-B6B9-3FD9834B05A6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -108,7 +108,7 @@
               DTS:DataType="6"
               DTS:TextQualified="True"
               DTS:ObjectName="SalesYTD"
-              DTS:DTSID="{7ED3BFF2-5C34-44DC-8ADF-0E05D167DF75}"
+              DTS:DTSID="{383A2A56-67CB-4D11-90BE-3D1F78D7E5B3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -116,7 +116,7 @@
               DTS:DataType="6"
               DTS:TextQualified="True"
               DTS:ObjectName="SalesLastYear"
-              DTS:DTSID="{97DD7A5F-6C8C-495D-B86F-227AFA72CF0D}"
+              DTS:DTSID="{BFF85F1D-1293-44FC-BE74-0D7A786DE6F7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -124,7 +124,7 @@
               DTS:DataType="6"
               DTS:TextQualified="True"
               DTS:ObjectName="CostYTD"
-              DTS:DTSID="{1E19A789-AE1A-4313-9F1A-92E6A38ED1A2}"
+              DTS:DTSID="{56E8D47E-51AB-4E4A-8D7D-05EB29D47DE5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -132,7 +132,7 @@
               DTS:DataType="6"
               DTS:TextQualified="True"
               DTS:ObjectName="CostLastYear"
-              DTS:DTSID="{970486AA-3A1F-44EC-A610-52A77686EA4B}"
+              DTS:DTSID="{7C51B103-3E5D-4BCD-BEFE-51D8CEE355A6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -140,7 +140,7 @@
               DTS:DataType="72"
               DTS:TextQualified="True"
               DTS:ObjectName="rowguid"
-              DTS:DTSID="{7537EA48-0125-4F28-89D0-B04A1D57C9FE}"
+              DTS:DTSID="{A395A38B-907D-4C3A-B4E2-0FC3713AB34E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -148,7 +148,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="ModifiedDate"
-              DTS:DTSID="{820E2EE9-2E3C-4B22-91D3-55A47F7B498E}"
+              DTS:DTSID="{B617C1E1-55AD-4B9B-AA34-80EBA5DA0F70}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -157,7 +157,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Code_Name"
-              DTS:DTSID="{111EFF04-9F19-4916-AA02-8C1C34B16357}"
+              DTS:DTSID="{507EBE79-1806-40D6-A618-A28D3CF58234}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -170,7 +170,7 @@
       DTS:refId="Package\Extract Sample Currency Data"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tâche de flux de données"
-      DTS:DTSID="{F357F2E0-EF40-473C-AAD7-58E606EDA1EE}"
+      DTS:DTSID="{F1AE9CFF-F8CD-4669-A457-526CD8F78C85}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="1033"
       DTS:ObjectName="Extract Sample Currency Data"
@@ -722,8 +722,8 @@
               <connections>
                 <connection
                   refId="Package\Extract Sample Currency Data\Extracting Dim Customer.Connections[OleDbConnection]"
-                  connectionManagerID="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-MDQ47B21_SQLEXPRESS.AdventureWorksDW2012]"
+                  connectionManagerID="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:invalid"
+                  connectionManagerRefId="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:invalid"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
@@ -1415,8 +1415,8 @@ where [refTable].[GeographyKey] = ?</property>
               <connections>
                 <connection
                   refId="Package\Extract Sample Currency Data\Search US customer's.Connections[OleDbConnection]"
-                  connectionManagerID="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-MDQ47B21_SQLEXPRESS.AdventureWorksDW2012]"
+                  connectionManagerID="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:invalid"
+                  connectionManagerRefId="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:invalid"
                   description="Gestionnaire de connexions utilisé pour accéder aux données de correspondance."
                   name="OleDbConnection" />
               </connections>
@@ -1582,7 +1582,7 @@ where [refTable].[GeographyKey] = ?</property>
       DTS:refId="Package\Tâche d'exécution de requêtes SQL"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tâche d'exécution de requêtes SQL"
-      DTS:DTSID="{EFB6F86E-B547-4A47-8142-E70065522F13}"
+      DTS:DTSID="{532AAE5F-DEF8-4C00-BC22-D7A896A85E36}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Tâche d'exécution de requêtes SQL"
@@ -1590,7 +1590,7 @@ where [refTable].[GeographyKey] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{856797B9-D820-4781-9466-B14A7D4802BE}"
+          SQLTask:Connection="{F17DD1D6-B543-479B-A8D2-36930D388AF2}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE  NewTable" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1599,7 +1599,7 @@ where [refTable].[GeographyKey] = ?</property>
       DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Tâche de script"
       DTS:Disabled="True"
-      DTS:DTSID="{C20DFA63-5B8E-4F91-A666-CC16F8D17C45}"
+      DTS:DTSID="{6D42CFB2-28F3-4418-93DA-1EEA2671DEB6}"
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Tâche de script"
@@ -1607,7 +1607,7 @@ where [refTable].[GeographyKey] = ?</property>
       <DTS:Variables>
         <DTS:Variable
           DTS:CreationName=""
-          DTS:DTSID="{FC37C09D-1B54-40C3-87E4-393DBDAD2093}"
+          DTS:DTSID="{32597BFB-0D86-4712-9D61-99D685057880}"
           DTS:IncludeInDebugDump="2345"
           DTS:Namespace="User"
           DTS:ObjectName="EmailBody">
@@ -1616,7 +1616,7 @@ where [refTable].[GeographyKey] = ?</property>
         </DTS:Variable>
         <DTS:Variable
           DTS:CreationName=""
-          DTS:DTSID="{E9DB8120-454A-4ACF-90B4-3F8B38B8F9FD}"
+          DTS:DTSID="{DEF303DD-830F-406B-A772-71DA06B0FB1A}"
           DTS:IncludeInDebugDump="2345"
           DTS:Namespace="User"
           DTS:ObjectName="EmailFrom">
@@ -1625,7 +1625,7 @@ where [refTable].[GeographyKey] = ?</property>
         </DTS:Variable>
         <DTS:Variable
           DTS:CreationName=""
-          DTS:DTSID="{12F59D2D-2C54-4D6C-9102-FE22675F47CC}"
+          DTS:DTSID="{AA14B3AB-931F-486E-9328-D587862D0AAC}"
           DTS:IncludeInDebugDump="2345"
           DTS:Namespace="User"
           DTS:ObjectName="EmailSubject">
@@ -1634,7 +1634,7 @@ where [refTable].[GeographyKey] = ?</property>
         </DTS:Variable>
         <DTS:Variable
           DTS:CreationName=""
-          DTS:DTSID="{3EBAB3B5-3CF7-44D5-A931-476267361850}"
+          DTS:DTSID="{09C6CD81-FE1A-4A1C-8CA7-AF0CAB33FD5C}"
           DTS:IncludeInDebugDump="2345"
           DTS:Namespace="User"
           DTS:ObjectName="EmailTo">
@@ -2289,7 +2289,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{74701100-767D-44FB-B381-6CB956B683D7}"
+      DTS:DTSID="{04168C59-2378-458B-A4A1-DBF2DEB526CA}"
       DTS:From="Package\Extract Sample Currency Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -2297,7 +2297,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{082D4009-5157-4E85-9ECF-A50F7C3C28C0}"
+      DTS:DTSID="{15AFE499-A199-44D3-9B1F-5538967CEE8F}"
       DTS:From="Package\Tâche d'exécution de requêtes SQL"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
