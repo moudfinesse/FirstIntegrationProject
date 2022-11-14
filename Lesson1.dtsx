@@ -7,14 +7,78 @@
   DTS:CreatorName="LAPTOP-MDQ47B21\33635"
   DTS:DTSID="{B9112022-4793-4CDB-9924-14DB25D4332F}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LastModifiedProductVersion="16.0.948.0"
   DTS:LocaleID="1036"
   DTS:ObjectName="Lesson1"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{C96D6EA3-0517-40AE-AB54-4E08E1884B4B}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{D7710C83-3A99-480F-B90E-E1989CF28142}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SortieReel]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{64F4F7A8-26C9-4B83-B8CE-C2D132BDC18C}"
+      DTS:ObjectName="SortieReel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\AD BI\Desktop\Formation_MSBI\SortieReel.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AverageRate"
+              DTS:DTSID="{D85ABB81-04C6-440E-9422-383866220867}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyID"
+              DTS:DTSID="{9CBB7186-5BD4-440E-9759-FE134B867996}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyDate"
+              DTS:DTSID="{0CB7AE87-975C-40BA-8380-933EF5150033}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EndOfDayRate"
+              DTS:DTSID="{EDA662B4-7F03-42C4-9640-751904A0FD39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyKey"
+              DTS:DTSID="{F40C0052-7139-4E71-977E-4B05BF6E57F6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -31,6 +95,109 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Extract Sample Currency Data\Destination de fichier plat"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destination de fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Destination de fichier plat"
+              localeId="1036"
+              name="Destination de fichier plat"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les données remplaceront ou seront ajoutées au fichier de destination."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Spécifie le texte à enregistrer sur le fichier de destination avant d'enregistrer des données."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quand le qualificateur de texte est activé, spécifie si le qualificateur de texte dans les données écrites dans le fichier de destination va être échappé ou non."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Sample Currency Data\Destination de fichier plat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SortieReel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SortieReel]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+                  hasSideEffects="true"
+                  name="Entrée de destination de fichier plat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[AverageRate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="AverageRate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[AverageRate]"
+                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[AverageRate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[CurrencyID]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CurrencyID"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CurrencyID]"
+                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyID]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[CurrencyDate]"
+                      cachedDataType="dbDate"
+                      cachedName="CurrencyDate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CurrencyDate]"
+                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyDate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[EndOfDayRate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="EndOfDayRate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[EndOfDayRate]"
+                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[EndOfDayRate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[CurrencyKey]"
+                      cachedDataType="i4"
+                      cachedName="CurrencyKey"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CurrencyKey]"
+                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie de recherche avec correspondance].Columns[CurrencyKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[AverageRate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="AverageRate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CurrencyID]"
+                      dataType="wstr"
+                      length="3"
+                      name="CurrencyID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CurrencyDate]"
+                      dataType="dbDate"
+                      name="CurrencyDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[EndOfDayRate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="EndOfDayRate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CurrencyKey]"
+                      dataType="i4"
+                      name="CurrencyKey" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
             <component
               refId="Package\Extract Sample Currency Data\Extract Sample Currency Data"
               componentClassID="Microsoft.FlatFileSource"
@@ -216,21 +383,17 @@
                   description="Spécifie l'instruction SQL qui génère la table de correspondance."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *  FROM [dbo].[DimCurrency]
-WHERE [CurrencyAlternateKey]
-IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
-    'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
-    'MXN', 'SAR', 'USD', 'VEB')</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT CurrencyKey, CurrencyAlternateKey, CurrencyName
+FROM     DimCurrency
+WHERE  (CurrencyAlternateKey IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY', 'DEM', 'EUR', 'FRF', 'GBP', 'JPY', 'MXN', 'SAR', 'USD', 'VEB'))</property>
                 <property
                   dataType="System.String"
                   description="Spécifie une instruction SQL qui utilise des paramètres pour générer la table de correspondance."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT *  FROM [dbo].[DimCurrency]
-WHERE [CurrencyAlternateKey]
-IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
-    'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
-    'MXN', 'SAR', 'USD', 'VEB')) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT CurrencyKey, CurrencyAlternateKey, CurrencyName
+FROM     DimCurrency
+WHERE  (CurrencyAlternateKey IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY', 'DEM', 'EUR', 'FRF', 'GBP', 'JPY', 'MXN', 'SAR', 'USD', 'VEB'))) [refTable]
 where [refTable].[CurrencyAlternateKey] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -369,349 +532,13 @@ where [refTable].[CurrencyAlternateKey] = ?</property>
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Extract Sample Currency Data\Lookup Date Key"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Recherche;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;6"
-              description="Joint des colonnes supplémentaires au flux de données en recherchant des valeurs dans une table. Par exemple, joignez la colonne 'id employé' à la table des employés afin d'obtenir la 'date d'embauche' et le 'nom de l'employé'. Nous recommandons cette transformation lorsque la table de recherche peut être stockée en mémoire."
-              name="Lookup Date Key"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Spécifie l'instruction SQL qui génère la table de correspondance."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimDate]</property>
-                <property
-                  dataType="System.String"
-                  description="Spécifie une instruction SQL qui utilise des paramètres pour générer la table de correspondance."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimDate]) [refTable]
-where [refTable].[FullDateAlternateKey] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie le type de connexion utilisé pour accéder au dataset de référence."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie le type de cache de la table de correspondance."
-                  name="CacheType"
-                  typeConverter="CacheType">1</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie comment la transformation de recherche gère les lignes sans entrées correspondantes dans le jeu de données de référence."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie le pourcentage du cache alloué aux lignes sans entrées correspondantes dans le dataset de référence."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 32 bits."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 64 bits."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indique si les métadonnées sont à référencer en format XML."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FullDateAlternateKey" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfWeek" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EnglishDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpanishDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FrenchDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfMonth" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekNumberOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EnglishMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpanishMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FrenchMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthNumberOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarQuarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarSemester" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalQuarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalSemester" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyDate]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Détermine si les clés dupliquées dans les données de référence doivent être traitées en tant qu'erreurs lorsque le mode Cache complet est utilisé."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Connections[OleDbConnection]"
-                  connectionManagerID="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-MDQ47B21_SQLEXPRESS.AdventureWorksDW2012]"
-                  description="Gestionnaire de connexions utilisé pour accéder aux données de correspondance."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Entrée de recherche]"
-                  name="Entrée de recherche">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Entrée de recherche].Columns[CurrencyDate]"
-                      cachedDataType="dbDate"
-                      cachedName="CurrencyDate"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyDate]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
-                          name="JoinToReferenceColumn">FullDateAlternateKey</property>
-                        <property
-                          dataType="System.Null"
-                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie de recherche avec correspondance]"
-                  errorOrTruncationOperation="Recherche"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Sortie de recherche avec correspondance"
-                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Entrée de recherche]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie de recherche avec correspondance].Columns[DateKey]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copie de colonnes"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie de recherche avec correspondance].Columns[DateKey]"
-                      name="DateKey"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
-                          name="CopyFromReferenceColumn">DateKey</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie de recherche sans correspondance]"
-                  description="Sortie de recherche gérant les lignes sans entrées correspondantes dans le dataset de référence. Utilisez cette sortie lorsque la propriété NoMatchBehavior a la valeur « Envoyez les lignes sans entrées correspondantes dans la sortie sans correspondance »."
-                  exclusionGroup="1"
-                  name="Sortie de recherche sans correspondance"
-                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Entrée de recherche]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie d'erreur de recherche]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Sortie d'erreur de recherche"
-                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Entrée de recherche]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Extract Sample Currency Data\Sample OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
-              description="Destination OLE DB"
-              name="Sample OLE DB Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
-                  name="OpenRowset">[NewFactCurrencyRate]</property>
-                <property
-                  dataType="System.String"
-                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="Commande SQL à exécuter."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie le mode utilisé pour accéder à la base de données."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
-                  name="FastLoadOptions">TABLOCK</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-MDQ47B21_SQLEXPRESS.AdventureWorksDW2012]"
-                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB]"
-                  errorOrTruncationOperation="Insérer"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Entrée de destination OLE DB">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].Columns[AverageRate]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="11"
-                      cachedName="AverageRate"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[AverageRate]"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[AverageRate]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].Columns[CurrencyID]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="CurrencyID"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[CurrencyID]"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyID]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].Columns[CurrencyDate]"
-                      cachedDataType="dbDate"
-                      cachedName="CurrencyDate"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[CurrencyDate]"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyDate]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].Columns[EndOfDayRate]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="11"
-                      cachedName="EndOfDayRate"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[EndOfDayRate]"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[EndOfDayRate]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].Columns[CurrencyKey]"
-                      cachedDataType="i4"
-                      cachedName="CurrencyKey"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[CurrencyKey]"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie de recherche avec correspondance].Columns[CurrencyKey]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].Columns[DateKey]"
-                      cachedDataType="i4"
-                      cachedName="DateKey"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[DateKey]"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie de recherche avec correspondance].Columns[DateKey]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[AverageRate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="11"
-                      name="AverageRate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[CurrencyID]"
-                      dataType="wstr"
-                      length="3"
-                      name="CurrencyID" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[CurrencyDate]"
-                      dataType="dbDate"
-                      name="CurrencyDate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[EndOfDayRate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="11"
-                      name="EndOfDayRate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[CurrencyKey]"
-                      dataType="i4"
-                      name="CurrencyKey" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[DateKey]"
-                      dataType="i4"
-                      name="DateKey" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Outputs[Sortie d'erreur de destination OLE DB]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Sortie d'erreur de destination OLE DB"
-                  synchronousInputId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
               refId="Package\Extract Sample Currency Data.Paths[Sortie de recherche avec correspondance]"
-              endId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Entrée de recherche]"
+              endId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
               name="Sortie de recherche avec correspondance"
               startId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie de recherche avec correspondance]" />
-            <path
-              refId="Package\Extract Sample Currency Data.Paths[Sortie de recherche avec correspondance1]"
-              endId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie de recherche avec correspondance]" />
             <path
               refId="Package\Extract Sample Currency Data.Paths[Sortie de source de fichier plat]"
               endId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Entrée de recherche]"
@@ -723,12 +550,12 @@ where [refTable].[FullDateAlternateKey] = ?</property>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
-<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
-<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -752,16 +579,8 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           TopLeft="58.1849162000509,138.955556659875" />
         <NodeLayout
           Size="218.4,41.6"
-          Id="Package\Extract Sample Currency Data\Lookup Date Key"
-          TopLeft="58.1849162000509,233.422224077296" />
-        <NodeLayout
-          Size="218.4,41.6"
           Id="Package\Extract Sample Currency Data\Extract Sample Currency Data"
           TopLeft="58.1849162000509,44.4888892424549" />
-        <NodeLayout
-          Size="218.4,41.6"
-          Id="Package\Extract Sample Currency Data\Sample OLE DB Destination"
-          TopLeft="58.1849162000509,327.888891494716" />
         <EdgeLayout
           Id="Package\Extract Sample Currency Data.Paths[Sortie de source de fichier plat]"
           TopLeft="167.384916200051,86.0888892424548">
@@ -781,54 +600,36 @@ where [refTable].[FullDateAlternateKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Extract Sample Currency Data.Paths[Sortie de recherche avec correspondance1]"
-          TopLeft="167.384916200051,275.022224077296">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.8666674174203"
-              Start="0,0"
-              End="0,45.3666674174203">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.3666674174203" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,16.8786462087102,183.3540234375,11.609375"
+              BoundingBox="-8,14.6833337087102,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="199.2,41.6"
+          Id="Package\Extract Sample Currency Data\Destination de fichier plat"
+          TopLeft="67.1428582862931,234.764709174839" />
         <EdgeLayout
           Id="Package\Extract Sample Currency Data.Paths[Sortie de recherche avec correspondance]"
-          TopLeft="167.384916200051,180.555556659875">
+          TopLeft="167.063887243172,180.555556659875">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.8666674174202"
+              EndConnector="0,54.2091525149643"
               Start="0,0"
-              End="0,45.3666674174202">
+              End="0,46.7091525149643">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.3666674174202" />
+                    End="0,46.7091525149643" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,16.8786462087101,183.3540234375,11.609375"
+              BoundingBox="-91.67701171875,17.5498887574821,183.3540234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -855,42 +656,6 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Sample Currency Data\Lookup Date Key">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Sample Currency Data\Sample OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

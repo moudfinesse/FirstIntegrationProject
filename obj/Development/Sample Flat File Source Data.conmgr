@@ -11,7 +11,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x003C_none_x003E_"
       DTS:CodePage="1252"
-      DTS:ConnectionString="C:\Users\33635\Bureau\DataProjects\SSIS-Tutorial-master\SampleCurrencyData.txt">
+      DTS:ConnectionString="C:\Users\AD BI\Desktop\Formation_MSBI\SampleCurrencyData.txt">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -20,7 +20,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="AverageRate"
-          DTS:DTSID="{2964B81D-DE90-432A-B5DF-654A924515AA}"
+          DTS:DTSID="{EA384D8B-C834-4A0B-8A76-0A987AE58D8F}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -29,7 +29,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="CurrencyID"
-          DTS:DTSID="{A7967809-4F74-41E6-B847-6F3582DAE69A}"
+          DTS:DTSID="{9A230F41-52B9-48BA-99C9-41457802F3D0}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -37,7 +37,7 @@
           DTS:DataType="133"
           DTS:TextQualified="True"
           DTS:ObjectName="CurrencyDate"
-          DTS:DTSID="{1BE382CF-9A46-4FF5-BAB1-2017161B2CB9}"
+          DTS:DTSID="{46B5756A-79F0-4ABA-A7C8-D48EADED5C20}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -46,7 +46,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="EndOfDayRate"
-          DTS:DTSID="{A70B05EC-45DA-4C30-BA54-FE6288F6BEF5}"
+          DTS:DTSID="{16190C90-302B-487A-A605-FECD60BF9BB9}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

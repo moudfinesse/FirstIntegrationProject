@@ -2,23 +2,23 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>FisrtIntegrationProject</Name>
-    <LastWriteTime>2021-11-19T10:15:49.4947465Z</LastWriteTime>
+    <LastWriteTime>2022-11-11T11:30:36.5023261Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Lesson1.dtsx</Name>
-      <LastWriteTime>2021-11-19T09:48:27.6967043Z</LastWriteTime>
+      <LastWriteTime>2022-11-11T09:59:09.9135551Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Lesson2.dtsx</Name>
-      <LastWriteTime>2021-11-19T18:43:06.226807Z</LastWriteTime>
+      <LastWriteTime>2022-11-07T15:41:08.6832732Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>Lesson1 (1).dtsx</Name>
-      <LastWriteTime>2021-11-19T09:51:57.5518259Z</LastWriteTime>
+      <Name>DWToFalt.dtsx</Name>
+      <LastWriteTime>2022-11-14T08:50:47.0374847Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

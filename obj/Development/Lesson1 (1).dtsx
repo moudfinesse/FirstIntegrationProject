@@ -7,14 +7,139 @@
   DTS:CreatorName="LAPTOP-MDQ47B21\33635"
   DTS:DTSID="{073B27C1-A5C0-4C6D-A29B-233C238C75D6}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LastModifiedProductVersion="16.0.948.0"
   DTS:LocaleID="1036"
   DTS:ObjectName="Lesson1"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{423A7359-F350-4B41-A913-35B200B32837}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{B7B5A8BA-E638-4E8D-B5A7-FF66112132E8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.AdventureWorks2012]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8A35D6CA-2173-4490-AA4D-24F654DD85D1}"
+      DTS:ObjectName="localhost.AdventureWorks2012">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AdventureWorks2012;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Lesson1-{8A35D6CA-2173-4490-AA4D-24F654DD85D1}localhost.AdventureWorks2012;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SortieReel]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C2E7BB2B-6930-4F78-B009-B208C2C28B33}"
+      DTS:ObjectName="SortieReel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\AD BI\Desktop\Formation_MSBI\SortieReel.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TerritoryID"
+              DTS:DTSID="{111657B1-7A89-4C11-AD07-880FC113947B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{8E9E03F6-07D4-4D07-BB5E-0FB287111F3E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CountryRegionCode"
+              DTS:DTSID="{54C4CF1E-BA84-4F86-8FA7-D79D1DF6FB72}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Group"
+              DTS:DTSID="{F75CA2B3-AEAE-495F-BECD-7C079A601D01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesYTD"
+              DTS:DTSID="{7ED3BFF2-5C34-44DC-8ADF-0E05D167DF75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesLastYear"
+              DTS:DTSID="{97DD7A5F-6C8C-495D-B86F-227AFA72CF0D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CostYTD"
+              DTS:DTSID="{1E19A789-AE1A-4313-9F1A-92E6A38ED1A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CostLastYear"
+              DTS:DTSID="{970486AA-3A1F-44EC-A610-52A77686EA4B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="rowguid"
+              DTS:DTSID="{7537EA48-0125-4F28-89D0-B04A1D57C9FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ModifiedDate"
+              DTS:DTSID="{820E2EE9-2E3C-4B22-91D3-55A47F7B498E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="53"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Code_Name"
+              DTS:DTSID="{111EFF04-9F19-4916-AA02-8C1C34B16357}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -32,169 +157,86 @@
           version="1">
           <components>
             <component
-              refId="Package\Extract Sample Currency Data\Extract Sample Currency Data"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
-              description="Source du fichier plat"
-              localeId="1033"
-              name="Extract Sample Currency Data"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Connections[FlatFileConnection]"
-                  connectionManagerID="{16AA26A5-A3A5-42D4-8281-3108C1315246}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Sample Flat File Source Data]"
-                  name="FlatFileConnection" />
-              </connections>
+              refId="Package\Extract Sample Currency Data\Colonne dérivée"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Extract Sample Currency Data\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[CountryRegionCode]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CountryRegionCode"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CountryRegionCode]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
               <outputs>
                 <output
-                  refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat]"
-                  name="Sortie de source de fichier plat">
+                  refId="Package\Extract Sample Currency Data\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Extract Sample Currency Data\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[AverageRate]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].ExternalColumns[AverageRate]"
-                      length="11"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[AverageRate]"
-                      name="AverageRate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyID]"
+                      refId="Package\Extract Sample Currency Data\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Code_Name]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
+                      errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].ExternalColumns[CurrencyID]"
-                      length="3"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyID]"
-                      name="CurrencyID"
+                      length="53"
+                      lineageId="Package\Extract Sample Currency Data\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Code_Name]"
+                      name="Code_Name"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">#{Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CountryRegionCode]} + #{Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Name]}</property>
                         <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyDate]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].ExternalColumns[CurrencyDate]"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyDate]"
-                      name="CurrencyDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[EndOfDayRate]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].ExternalColumns[EndOfDayRate]"
-                      length="11"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[EndOfDayRate]"
-                      name="EndOfDayRate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">CountryRegionCode + Name</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].ExternalColumns[AverageRate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="11"
-                      name="AverageRate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].ExternalColumns[CurrencyID]"
-                      dataType="wstr"
-                      length="3"
-                      name="CurrencyID" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].ExternalColumns[CurrencyDate]"
-                      dataType="dbDate"
-                      name="CurrencyDate" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].ExternalColumns[EndOfDayRate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="11"
-                      name="EndOfDayRate" />
-                  </externalMetadataColumns>
+                  <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie d'erreur de source de fichier plat]"
+                  refId="Package\Extract Sample Currency Data\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
                   isErrorOut="true"
-                  name="Sortie d'erreur de source de fichier plat">
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Extract Sample Currency Data\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Colonne de sortie d'erreur de source de fichier plat"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
-                      name="Colonne de sortie d'erreur de source de fichier plat" />
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      refId="Package\Extract Sample Currency Data\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      lineageId="Package\Extract Sample Currency Data\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      refId="Package\Extract Sample Currency Data\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      lineageId="Package\Extract Sample Currency Data\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -203,11 +245,263 @@
               </outputs>
             </component>
             <component
-              refId="Package\Extract Sample Currency Data\Lookup Currency Key"
+              refId="Package\Extract Sample Currency Data\Destination de fichier plat"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destination de fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Destination de fichier plat"
+              localeId="1036"
+              name="Destination de fichier plat"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les données remplaceront ou seront ajoutées au fichier de destination."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Spécifie le texte à enregistrer sur le fichier de destination avant d'enregistrer des données."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quand le qualificateur de texte est activé, spécifie si le qualificateur de texte dans les données écrites dans le fichier de destination va être échappé ou non."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Sample Currency Data\Destination de fichier plat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SortieReel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SortieReel]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+                  hasSideEffects="true"
+                  name="Entrée de destination de fichier plat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[TerritoryID]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[TerritoryID]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Name]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[CountryRegionCode]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CountryRegionCode"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CountryRegionCode]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CountryRegionCode]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Group]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Group"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Group]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Group]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[SalesYTD]"
+                      cachedDataType="cy"
+                      cachedName="SalesYTD"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalesYTD]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[SalesYTD]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[SalesLastYear]"
+                      cachedDataType="cy"
+                      cachedName="SalesLastYear"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalesLastYear]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[SalesLastYear]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[CostYTD]"
+                      cachedDataType="cy"
+                      cachedName="CostYTD"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CostYTD]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CostYTD]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[CostLastYear]"
+                      cachedDataType="cy"
+                      cachedName="CostLastYear"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CostLastYear]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CostLastYear]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[rowguid]"
+                      cachedDataType="guid"
+                      cachedName="rowguid"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[rowguid]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[rowguid]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[ModifiedDate]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Code_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="53"
+                      cachedName="Code_Name"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Code_Name]"
+                      lineageId="Package\Extract Sample Currency Data\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Code_Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CountryRegionCode]"
+                      dataType="wstr"
+                      length="3"
+                      name="CountryRegionCode" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Group]"
+                      dataType="wstr"
+                      length="50"
+                      name="Group" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalesYTD]"
+                      dataType="cy"
+                      name="SalesYTD" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalesLastYear]"
+                      dataType="cy"
+                      name="SalesLastYear" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CostYTD]"
+                      dataType="cy"
+                      name="CostYTD" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CostLastYear]"
+                      dataType="cy"
+                      name="CostLastYear" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[rowguid]"
+                      dataType="guid"
+                      name="rowguid" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Code_Name]"
+                      dataType="wstr"
+                      length="53"
+                      name="Code_Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Extract Sample Currency Data\Destination de fichier plat 1"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destination de fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Destination de fichier plat"
+              localeId="1036"
+              name="Destination de fichier plat 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les données remplaceront ou seront ajoutées au fichier de destination."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Spécifie le texte à enregistrer sur le fichier de destination avant d'enregistrer des données."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quand le qualificateur de texte est activé, spécifie si le qualificateur de texte dans les données écrites dans le fichier de destination va être échappé ou non."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Connections[FlatFileConnection]"
+                  connectionManagerID="{ECDDB331-4682-4A7B-8EDC-686FED1B228A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Sortie1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat]"
+                  hasSideEffects="true"
+                  name="Entrée de destination de fichier plat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat].ExternalColumns[AAA]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[TerritoryID]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat].Columns[CountryRegionCode]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CountryRegionCode"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat].ExternalColumns[ABBB]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[CountryRegionCode]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat].ExternalColumns[ACCC]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat].Columns[CostLastYear]"
+                      cachedDataType="cy"
+                      cachedName="CostLastYear"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat].ExternalColumns[EndOfDay]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[CostLastYear]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat].ExternalColumns[AAA]"
+                      dataType="i4"
+                      name="AAA" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat].ExternalColumns[ABBB]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="ABBB" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat].ExternalColumns[ACCC]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      name="ACCC" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat].ExternalColumns[EndOfDay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="EndOfDay" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Extract Sample Currency Data\Recherche"
               componentClassID="Microsoft.Lookup"
               contactInfo="Recherche;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;6"
               description="Joint des colonnes supplémentaires au flux de données en recherchant des valeurs dans une table. Par exemple, joignez la colonne 'id employé' à la table des employés afin d'obtenir la 'date d'embauche' et le 'nom de l'employé'. Nous recommandons cette transformation lorsque la table de recherche peut être stockée en mémoire."
-              name="Lookup Currency Key"
+              name="Recherche"
               usesDispositions="true"
               version="6">
               <properties>
@@ -216,22 +510,18 @@
                   description="Spécifie l'instruction SQL qui génère la table de correspondance."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *  FROM [dbo].[DimCurrency]
-WHERE [CurrencyAlternateKey]
-IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
-    'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
-    'MXN', 'SAR', 'USD', 'VEB')</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT *
+FROM [Sales].[SalesTerritory]
+WHERE CountryRegionCode ='US'</property>
                 <property
                   dataType="System.String"
                   description="Spécifie une instruction SQL qui utilise des paramètres pour générer la table de correspondance."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT *  FROM [dbo].[DimCurrency]
-WHERE [CurrencyAlternateKey]
-IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
-    'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
-    'MXN', 'SAR', 'USD', 'VEB')) [refTable]
-where [refTable].[CurrencyAlternateKey] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT *
+FROM [Sales].[SalesTerritory]
+WHERE CountryRegionCode ='US') [refTable]
+where [refTable].[TerritoryID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie le type de connexion utilisé pour accéder au dataset de référence."
@@ -262,12 +552,12 @@ where [refTable].[CurrencyAlternateKey] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indique si les métadonnées sont à référencer en format XML."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CurrencyKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CurrencyAlternateKey" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CurrencyName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="TerritoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountryRegionCode" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Group" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalesYTD" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalesLastYear" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CostYTD" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CostLastYear" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rowguid" dataType="DT_GUID" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ModifiedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyID]};</property>
+                  name="ParameterMap">#{Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[TerritoryID]};</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -279,28 +569,27 @@ where [refTable].[CurrencyAlternateKey] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Extract Sample Currency Data\Lookup Currency Key.Connections[OleDbConnection]"
-                  connectionManagerID="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-MDQ47B21_SQLEXPRESS.AdventureWorksDW2012]"
+                  refId="Package\Extract Sample Currency Data\Recherche.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.AdventureWorks2012]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.AdventureWorks2012]"
                   description="Gestionnaire de connexions utilisé pour accéder aux données de correspondance."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Entrée de recherche]"
+                  refId="Package\Extract Sample Currency Data\Recherche.Inputs[Entrée de recherche]"
                   name="Entrée de recherche">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Entrée de recherche].Columns[CurrencyID]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="CurrencyID"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyID]">
+                      refId="Package\Extract Sample Currency Data\Recherche.Inputs[Entrée de recherche].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[TerritoryID]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
-                          name="JoinToReferenceColumn">CurrencyAlternateKey</property>
+                          name="JoinToReferenceColumn">TerritoryID</property>
                         <property
                           dataType="System.Null"
                           description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
@@ -313,55 +602,39 @@ where [refTable].[CurrencyAlternateKey] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie de recherche avec correspondance]"
+                  refId="Package\Extract Sample Currency Data\Recherche.Outputs[Sortie de recherche avec correspondance]"
                   errorOrTruncationOperation="Recherche"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Sortie de recherche avec correspondance"
-                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Entrée de recherche]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie de recherche avec correspondance].Columns[CurrencyKey]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copie de colonnes"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie de recherche avec correspondance].Columns[CurrencyKey]"
-                      name="CurrencyKey"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
-                          name="CopyFromReferenceColumn">CurrencyKey</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
+                  synchronousInputId="Package\Extract Sample Currency Data\Recherche.Inputs[Entrée de recherche]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie de recherche sans correspondance]"
+                  refId="Package\Extract Sample Currency Data\Recherche.Outputs[Sortie de recherche sans correspondance]"
                   description="Sortie de recherche gérant les lignes sans entrées correspondantes dans le dataset de référence. Utilisez cette sortie lorsque la propriété NoMatchBehavior a la valeur « Envoyez les lignes sans entrées correspondantes dans la sortie sans correspondance »."
                   exclusionGroup="1"
                   name="Sortie de recherche sans correspondance"
-                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Entrée de recherche]">
+                  synchronousInputId="Package\Extract Sample Currency Data\Recherche.Inputs[Entrée de recherche]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie d'erreur de recherche]"
+                  refId="Package\Extract Sample Currency Data\Recherche.Outputs[Sortie d'erreur de recherche]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de recherche"
-                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Entrée de recherche]">
+                  synchronousInputId="Package\Extract Sample Currency Data\Recherche.Inputs[Entrée de recherche]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      refId="Package\Extract Sample Currency Data\Recherche.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      lineageId="Package\Extract Sample Currency Data\Recherche.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      refId="Package\Extract Sample Currency Data\Recherche.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      lineageId="Package\Extract Sample Currency Data\Recherche.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -370,171 +643,13 @@ where [refTable].[CurrencyAlternateKey] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Extract Sample Currency Data\Lookup Date Key"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Recherche;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;6"
-              description="Joint des colonnes supplémentaires au flux de données en recherchant des valeurs dans une table. Par exemple, joignez la colonne 'id employé' à la table des employés afin d'obtenir la 'date d'embauche' et le 'nom de l'employé'. Nous recommandons cette transformation lorsque la table de recherche peut être stockée en mémoire."
-              name="Lookup Date Key"
+              refId="Package\Extract Sample Currency Data\Source OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="Source OLE DB"
               usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Spécifie l'instruction SQL qui génère la table de correspondance."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimDate]</property>
-                <property
-                  dataType="System.String"
-                  description="Spécifie une instruction SQL qui utilise des paramètres pour générer la table de correspondance."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimDate]) [refTable]
-where [refTable].[FullDateAlternateKey] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie le type de connexion utilisé pour accéder au dataset de référence."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie le type de cache de la table de correspondance."
-                  name="CacheType"
-                  typeConverter="CacheType">1</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie comment la transformation de recherche gère les lignes sans entrées correspondantes dans le jeu de données de référence."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie le pourcentage du cache alloué aux lignes sans entrées correspondantes dans le dataset de référence."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 32 bits."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 64 bits."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indique si les métadonnées sont à référencer en format XML."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FullDateAlternateKey" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfWeek" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EnglishDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpanishDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FrenchDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfMonth" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekNumberOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EnglishMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpanishMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FrenchMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthNumberOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarQuarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarSemester" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalQuarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalSemester" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyDate]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Détermine si les clés dupliquées dans les données de référence doivent être traitées en tant qu'erreurs lorsque le mode Cache complet est utilisé."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Connections[OleDbConnection]"
-                  connectionManagerID="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-MDQ47B21_SQLEXPRESS.AdventureWorksDW2012]"
-                  description="Gestionnaire de connexions utilisé pour accéder aux données de correspondance."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Entrée de recherche]"
-                  name="Entrée de recherche">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Entrée de recherche].Columns[CurrencyDate]"
-                      cachedDataType="dbDate"
-                      cachedName="CurrencyDate"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyDate]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
-                          name="JoinToReferenceColumn">FullDateAlternateKey</property>
-                        <property
-                          dataType="System.Null"
-                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie de recherche avec correspondance]"
-                  errorOrTruncationOperation="Recherche"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Sortie de recherche avec correspondance"
-                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Entrée de recherche]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie de recherche avec correspondance].Columns[DateKey]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copie de colonnes"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie de recherche avec correspondance].Columns[DateKey]"
-                      name="DateKey"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
-                          name="CopyFromReferenceColumn">DateKey</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie de recherche sans correspondance]"
-                  description="Sortie de recherche gérant les lignes sans entrées correspondantes dans le dataset de référence. Utilisez cette sortie lorsque la propriété NoMatchBehavior a la valeur « Envoyez les lignes sans entrées correspondantes dans la sortie sans correspondance »."
-                  exclusionGroup="1"
-                  name="Sortie de recherche sans correspondance"
-                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Entrée de recherche]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie d'erreur de recherche]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Sortie d'erreur de recherche"
-                  synchronousInputId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Entrée de recherche]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Extract Sample Currency Data\Sample OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
-              description="Destination OLE DB"
-              name="Sample OLE DB Destination"
-              usesDispositions="true"
-              version="4">
+              version="7">
               <properties>
                 <property
                   dataType="System.Int32"
@@ -543,7 +658,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                 <property
                   dataType="System.String"
                   description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
-                  name="OpenRowset">[NewFactCurrencyRate]</property>
+                  name="OpenRowset">[Sales].[SalesTerritory]</property>
                 <property
                   dataType="System.String"
                   description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
@@ -552,7 +667,11 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                   dataType="System.String"
                   description="Commande SQL à exécuter."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -565,134 +684,511 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                   dataType="System.Int32"
                   description="Spécifie le mode utilisé pour accéder à la base de données."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
-                  name="FastLoadKeepNulls">false</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.String"
-                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
-                  name="FastLoadOptions">TABLOCK</property>
-                <property
-                  dataType="System.Int32"
-                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{C6A8070D-3822-4983-AFC2-3F221EE5192B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-MDQ47B21_SQLEXPRESS.AdventureWorksDW2012]"
+                  refId="Package\Extract Sample Currency Data\Source OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.AdventureWorks2012]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.AdventureWorks2012]"
                   description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
-              <inputs>
-                <input
-                  refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB]"
-                  errorOrTruncationOperation="Insérer"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Entrée de destination OLE DB">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].Columns[AverageRate]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="11"
-                      cachedName="AverageRate"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[AverageRate]"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[AverageRate]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].Columns[CurrencyID]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="CurrencyID"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[CurrencyID]"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyID]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].Columns[CurrencyDate]"
-                      cachedDataType="dbDate"
-                      cachedName="CurrencyDate"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[CurrencyDate]"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[CurrencyDate]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].Columns[EndOfDayRate]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="11"
-                      cachedName="EndOfDayRate"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[EndOfDayRate]"
-                      lineageId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat].Columns[EndOfDayRate]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].Columns[CurrencyKey]"
-                      cachedDataType="i4"
-                      cachedName="CurrencyKey"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[CurrencyKey]"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie de recherche avec correspondance].Columns[CurrencyKey]" />
-                    <inputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].Columns[DateKey]"
-                      cachedDataType="i4"
-                      cachedName="DateKey"
-                      externalMetadataColumnId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[DateKey]"
-                      lineageId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie de recherche avec correspondance].Columns[DateKey]" />
-                  </inputColumns>
+              <outputs>
+                <output
+                  refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[TerritoryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[TerritoryID]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CountryRegionCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[CountryRegionCode]"
+                      length="3"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CountryRegionCode]"
+                      name="CountryRegionCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Group]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Group]"
+                      length="50"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Group]"
+                      name="Group"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[SalesYTD]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[SalesYTD]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[SalesYTD]"
+                      name="SalesYTD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[SalesLastYear]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[SalesLastYear]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[SalesLastYear]"
+                      name="SalesLastYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CostYTD]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[CostYTD]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CostYTD]"
+                      name="CostYTD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CostLastYear]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[CostLastYear]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[CostLastYear]"
+                      name="CostLastYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[rowguid]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[rowguid]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[rowguid]"
+                      name="rowguid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[AverageRate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="11"
-                      name="AverageRate" />
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
                     <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[CurrencyID]"
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[CountryRegionCode]"
                       dataType="wstr"
                       length="3"
-                      name="CurrencyID" />
+                      name="CountryRegionCode" />
                     <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[CurrencyDate]"
-                      dataType="dbDate"
-                      name="CurrencyDate" />
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Group]"
+                      dataType="wstr"
+                      length="50"
+                      name="Group" />
                     <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[EndOfDayRate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="11"
-                      name="EndOfDayRate" />
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[SalesYTD]"
+                      dataType="cy"
+                      name="SalesYTD" />
                     <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[CurrencyKey]"
-                      dataType="i4"
-                      name="CurrencyKey" />
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[SalesLastYear]"
+                      dataType="cy"
+                      name="SalesLastYear" />
                     <externalMetadataColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB].ExternalColumns[DateKey]"
-                      dataType="i4"
-                      name="DateKey" />
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[CostYTD]"
+                      dataType="cy"
+                      name="CostYTD" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[CostLastYear]"
+                      dataType="cy"
+                      name="CostLastYear" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[rowguid]"
+                      dataType="guid"
+                      name="rowguid" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
                   </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
+                </output>
                 <output
-                  refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Outputs[Sortie d'erreur de destination OLE DB]"
-                  exclusionGroup="1"
+                  refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
                   isErrorOut="true"
-                  name="Sortie d'erreur de destination OLE DB"
-                  synchronousInputId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB]">
+                  name="Sortie d'erreur de source OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[TerritoryID]"
                       dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[TerritoryID]"
+                      name="TerritoryID" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[CountryRegionCode]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[CountryRegionCode]"
+                      name="CountryRegionCode" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Group]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Group]"
+                      name="Group" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[SalesYTD]"
+                      dataType="cy"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[SalesYTD]"
+                      name="SalesYTD" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[SalesLastYear]"
+                      dataType="cy"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[SalesLastYear]"
+                      name="SalesLastYear" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[CostYTD]"
+                      dataType="cy"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[CostYTD]"
+                      name="CostYTD" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[CostLastYear]"
+                      dataType="cy"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[CostLastYear]"
+                      name="CostLastYear" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[rowguid]"
+                      dataType="guid"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[rowguid]"
+                      name="rowguid" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Sample Currency Data\Source OLE DB 1"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="Source OLE DB 1"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[Sales].[SalesTerritory]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Sample Currency Data\Source OLE DB 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.AdventureWorks2012]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.AdventureWorks2012]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[TerritoryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[TerritoryID]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[CountryRegionCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[CountryRegionCode]"
+                      length="3"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[CountryRegionCode]"
+                      name="CountryRegionCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[Group]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[Group]"
+                      length="50"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[Group]"
+                      name="Group"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[SalesYTD]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[SalesYTD]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[SalesYTD]"
+                      name="SalesYTD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[SalesLastYear]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[SalesLastYear]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[SalesLastYear]"
+                      name="SalesLastYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[CostYTD]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[CostYTD]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[CostYTD]"
+                      name="CostYTD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[CostLastYear]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[CostLastYear]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[CostLastYear]"
+                      name="CostLastYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[rowguid]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[rowguid]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[rowguid]"
+                      name="rowguid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[CountryRegionCode]"
+                      dataType="wstr"
+                      length="3"
+                      name="CountryRegionCode" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[Group]"
+                      dataType="wstr"
+                      length="50"
+                      name="Group" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[SalesYTD]"
+                      dataType="cy"
+                      name="SalesYTD" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[SalesLastYear]"
+                      dataType="cy"
+                      name="SalesLastYear" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[CostYTD]"
+                      dataType="cy"
+                      name="CostYTD" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[CostLastYear]"
+                      dataType="cy"
+                      name="CostLastYear" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[rowguid]"
+                      dataType="guid"
+                      name="rowguid" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[TerritoryID]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[TerritoryID]"
+                      name="TerritoryID" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[CountryRegionCode]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[CountryRegionCode]"
+                      name="CountryRegionCode" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[Group]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[Group]"
+                      name="Group" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[SalesYTD]"
+                      dataType="cy"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[SalesYTD]"
+                      name="SalesYTD" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[SalesLastYear]"
+                      dataType="cy"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[SalesLastYear]"
+                      name="SalesLastYear" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[CostYTD]"
+                      dataType="cy"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[CostYTD]"
+                      name="CostYTD" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[CostLastYear]"
+                      dataType="cy"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[CostLastYear]"
+                      name="CostLastYear" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[rowguid]"
+                      dataType="guid"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[rowguid]"
+                      name="rowguid" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -703,32 +1199,37 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           </components>
           <paths>
             <path
+              refId="Package\Extract Sample Currency Data.Paths[Sortie de colonne dérivée]"
+              endId="Package\Extract Sample Currency Data\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Extract Sample Currency Data\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
+            <path
               refId="Package\Extract Sample Currency Data.Paths[Sortie de recherche avec correspondance]"
-              endId="Package\Extract Sample Currency Data\Lookup Date Key.Inputs[Entrée de recherche]"
+              endId="Package\Extract Sample Currency Data\Destination de fichier plat 1.Inputs[Entrée de destination de fichier plat]"
               name="Sortie de recherche avec correspondance"
-              startId="Package\Extract Sample Currency Data\Lookup Currency Key.Outputs[Sortie de recherche avec correspondance]" />
+              startId="Package\Extract Sample Currency Data\Recherche.Outputs[Sortie de recherche avec correspondance]" />
             <path
-              refId="Package\Extract Sample Currency Data.Paths[Sortie de recherche avec correspondance1]"
-              endId="Package\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\Extract Sample Currency Data\Lookup Date Key.Outputs[Sortie de recherche avec correspondance]" />
+              refId="Package\Extract Sample Currency Data.Paths[Sortie de source OLE DB]"
+              endId="Package\Extract Sample Currency Data\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de source OLE DB"
+              startId="Package\Extract Sample Currency Data\Source OLE DB.Outputs[Sortie de source OLE DB]" />
             <path
-              refId="Package\Extract Sample Currency Data.Paths[Sortie de source de fichier plat]"
-              endId="Package\Extract Sample Currency Data\Lookup Currency Key.Inputs[Entrée de recherche]"
-              name="Sortie de source de fichier plat"
-              startId="Package\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Sortie de source de fichier plat]" />
+              refId="Package\Extract Sample Currency Data.Paths[Sortie de source OLE DB1]"
+              endId="Package\Extract Sample Currency Data\Recherche.Inputs[Entrée de recherche]"
+              name="Sortie de source OLE DB"
+              startId="Package\Extract Sample Currency Data\Source OLE DB 1.Outputs[Sortie de source OLE DB]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
-<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
-<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -745,37 +1246,29 @@ where [refTable].[FullDateAlternateKey] = ?</property>
     design-time-name="Package\Extract Sample Currency Data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="218.4,41.6"
-          Id="Package\Extract Sample Currency Data\Lookup Currency Key"
-          TopLeft="58.1849162000509,138.955556659875" />
+          Size="149.6,41.6"
+          Id="Package\Extract Sample Currency Data\Source OLE DB"
+          TopLeft="44.2857150398954,27.5294121507955" />
         <NodeLayout
-          Size="218.4,41.6"
-          Id="Package\Extract Sample Currency Data\Lookup Date Key"
-          TopLeft="58.1849162000509,233.422224077296" />
-        <NodeLayout
-          Size="218.4,41.6"
-          Id="Package\Extract Sample Currency Data\Extract Sample Currency Data"
-          TopLeft="58.1849162000509,44.4888892424549" />
-        <NodeLayout
-          Size="218.4,41.6"
-          Id="Package\Extract Sample Currency Data\Sample OLE DB Destination"
-          TopLeft="58.1849162000509,327.888891494716" />
+          Size="154.4,41.6"
+          Id="Package\Extract Sample Currency Data\Colonne dérivée"
+          TopLeft="45.0000007663455,107.058825030871" />
         <EdgeLayout
-          Id="Package\Extract Sample Currency Data.Paths[Sortie de source de fichier plat]"
-          TopLeft="167.384916200051,86.0888892424548">
+          Id="Package\Extract Sample Currency Data.Paths[Sortie de source OLE DB]"
+          TopLeft="120.64285790312,69.1294121507955">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.8666674174203"
+              EndConnector="0,37.9294128800759"
               Start="0,0"
-              End="0,45.3666674174203">
+              End="0,30.4294128800759">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.3666674174203" />
+                    End="0,30.4294128800759" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -784,51 +1277,99 @@ where [refTable].[FullDateAlternateKey] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="199.2,41.6"
+          Id="Package\Extract Sample Currency Data\Destination de fichier plat"
+          TopLeft="25.0000004257474,221.764708992519" />
         <EdgeLayout
-          Id="Package\Extract Sample Currency Data.Paths[Sortie de recherche avec correspondance1]"
-          TopLeft="167.384916200051,275.022224077296">
+          Id="Package\Extract Sample Currency Data.Paths[Sortie de colonne dérivée]"
+          TopLeft="123.400000596046,148.658825030871">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.8666674174203"
+              EndConnector="0,73.1058839616478"
               Start="0,0"
-              End="0,45.3666674174203">
+              End="0,65.6058839616478">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.3666674174203" />
+                    End="0,65.6058839616478" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,16.8786462087102,183.3540234375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Extract Sample Currency Data\Source OLE DB 1"
+          TopLeft="310.714291005719,26.0000003646402" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\Extract Sample Currency Data\Recherche"
+          TopLeft="319.285719723118,130.764707716279" />
         <EdgeLayout
-          Id="Package\Extract Sample Currency Data.Paths[Sortie de recherche avec correspondance]"
-          TopLeft="167.384916200051,180.555556659875">
+          Id="Package\Extract Sample Currency Data.Paths[Sortie de source OLE DB1]"
+          TopLeft="384.200005364418,67.6000003646402">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.8666674174202"
+              EndConnector="0,63.1647073516384"
               Start="0,0"
-              End="0,45.3666674174202">
+              End="0,55.6647073516384">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.3666674174202" />
+                    End="0,55.6647073516384" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\Extract Sample Currency Data\Destination de fichier plat 1"
+          TopLeft="295.71429075027,235.529415067917" />
+        <EdgeLayout
+          Id="Package\Extract Sample Currency Data.Paths[Sortie de recherche avec correspondance]"
+          TopLeft="382.885719723118,172.364707716279">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.8285710271524,63.1647073516386"
+              Start="0,0"
+              End="16.8285710271524,55.6647073516386">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5823536758193" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5823536758193"
+                    Point2="0,31.5823536758193"
+                    Point3="4,31.5823536758193" />
+                  <mssgle:LineSegment
+                    End="12.8285710271524,31.5823536758193" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.8285710271524,31.5823536758193"
+                    Point2="16.8285710271524,31.5823536758193"
+                    Point3="16.8285710271524,35.5823536758193" />
+                  <mssgle:LineSegment
+                    End="16.8285710271524,55.6647073516386" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,16.8786462087101,183.3540234375,11.609375"
+              BoundingBox="-83.2627262051738,36.5823536758193,183.3540234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -836,7 +1377,33 @@ where [refTable].[FullDateAlternateKey] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Sample Currency Data\Lookup Currency Key">
+    design-time-name="Package\Extract Sample Currency Data\Source OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Sample Currency Data\Source OLE DB 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Sample Currency Data\Recherche">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -855,42 +1422,6 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Sample Currency Data\Lookup Date Key">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Sample Currency Data\Sample OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
